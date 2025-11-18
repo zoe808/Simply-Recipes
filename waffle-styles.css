@@ -1,0 +1,221 @@
+/* Color Scheme */
+:root {
+    --light-beige: #F0E6DD;
+    --medium-beige: #E8DCD1;
+    --dark-beige: #D3C9BE;
+    --dark-brown: #3A2E26;
+    --sage-green: #8CA89A;
+    --dark-sage: #6B8E7E;
+    --warm-grey: #8C8A87;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-beige);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-brown);
+}
+
+#container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Header Styles */
+#header {
+    text-align: center;
+    padding: 30px 0;
+    background-color: var(--medium-beige);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#header h1 {
+    font-size: 2.8rem;
+    color: var(--dark-brown);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+#header h3 {
+    font-size: 1.4rem;
+    color: var(--warm-grey);
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Navigation Styles */
+#navigation {
+    background-color: var(--dark-brown);
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+#navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+#navigation li {
+    margin: 0;
+}
+
+#navigation a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#navigation a:hover {
+    background-color: var(--sage-green);
+    color: var(--dark-brown);
+}
+
+/* Content Styles */
+#content {
+    padding: 0 20px;
+}
+
+.recipe-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recipe-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: var(--dark-brown);
+    border-bottom: 2px solid var(--dark-beige);
+    padding-bottom: 10px;
+}
+
+.recipe-intro {
+    background-color: var(--light-beige);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-style: italic;
+    border-left: 4px solid var(--sage-green);
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.ingredients h3, .method h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--dark-sage);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--dark-beige);
+}
+
+.ingredients h4 {
+    font-size: 1.3rem;
+    margin: 25px 0 15px 0;
+    color: var(--dark-brown);
+    padding-left: 10px;
+    border-left: 3px solid var(--sage-green);
+}
+
+.ingredients ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ingredients li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--dark-beige);
+    position: relative;
+    padding-left: 25px;
+}
+
+.ingredients li:before {
+    content: "•";
+    color: var(--sage-green);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+}
+
+.method-step {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--dark-beige);
+}
+
+.method-step h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--dark-brown);
+    padding-left: 10px;
+    border-left: 3px solid var(--sage-green);
+}
+
+.method-step p {
+    margin-bottom: 10px;
+}
+
+.cooks-note {
+    background-color: var(--light-beige);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.cooks-note h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--dark-sage);
+}
+
+.cooks-note p {
+    margin-bottom: 15px;
+}
+
+.cooks-note strong {
+    color: var(--dark-sage);
+}
+
+/* Footer Styles */
+#footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--medium-beige);
+    border-radius: 8px;
+    color: var(--warm-grey);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navigation ul {
+        flex-direction: column;
+    }
+    
+    .recipe-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
